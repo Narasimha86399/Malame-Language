@@ -1,0 +1,91 @@
+<!-- gallery.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Malame Gallery</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+    .gallery img {
+      width: 300px;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    #lightbox {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+    #lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <a href="index.html">🏠 Home</a>
+    <a href="malame.html">🌐 Malame</a>
+    <a href="gallery.html">📸 Gallery</a>
+  </div>
+
+  <h1 style="text-align:center;">📸 Malame Language Pics</h1>
+
+  <div class="gallery">
+    <img src="malamenewsclip.jpg" alt="News" />
+    <img src="mother-tongue-day.jpg" alt="Mother Tongue Day" />
+    <img src="Days-of-the-Week-in-Malame.jpg" alt="Days of Week" />
+    <img src="ratha-saptami.jpg" alt="Ratha Saptami" />
+    <img src="1.jpg" alt="Image 1" />
+    <img src="2.jpg" alt="Image 2" />
+    <img src="3.jpg" alt="Image 3" />
+    <img src="4.jpg" alt="Image 4" />
+    <img src="5.jpg" alt="Image 5" />
+    <img src="man1.jpg" alt="Image 6" />
+    <img src="man2.jpg" alt="Image 7" />
+    <img src="njan1.jpg" alt="Image 8" />
+    <img src="njan2.jpg" alt="Image 9" />
+    <img src="rel1.jpg" alt="Image 10" />
+    <img src="rel2.jpg" alt="Image 11" />
+    <img src="shiv1.jpg" alt="Image 12" />
+    <img src="shiv2.jpg" alt="Image 13" />
+    <img src="shiv3.jpg" alt="Image 14" />
+    <img src="shiv4.jpg" alt="Image 15" />
+    <img src="shiv5.jpg" alt="Image 16" />
+  </div>
+
+  <div id="lightbox" onclick="this.style.display='none'">
+    <img src="" alt="fullscreen" id="lightbox-img" />
+  </div>
+
+  <footer>
+    Contact: <a href="mailto:info@malamelanguage.org">info@malamelanguage.org</a>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.gallery img').forEach(img => {
+      img.addEventListener('click', () => {
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        lightboxImg.src = img.src;
+        lightbox.style.display = 'flex';
+      });
+    });
+  </script>
+</body>
+</html>

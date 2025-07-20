@@ -1,0 +1,117 @@
+@font-face {
+  font-family: 'NotoSansKannada';
+  src: url('fonts/NotoSansKannada-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'NotoSansMalayalam';
+  src: url('fonts/NotoSansMalayalam-Regular.ttf') format('truetype');
+}
+
+body {
+  background-color: #fefefe;
+  font-family: 'NotoSansKannada', 'NotoSansMalayalam', sans-serif;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+  background-color: #222;
+}
+
+header img {
+  max-width: 120px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+header h1, header h2 {
+  margin: 0;
+  color: #f8f8f8;
+}
+
+/* Sticky Nav Bar */
+.sticky-nav {
+  position: sticky;
+  top: 0;
+  background-color: #333;
+  padding: 10px 0;
+  text-align: center;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.sticky-nav a {
+  color: #f8f8f8;
+  text-decoration: none;
+  margin: 0 20px;
+  font-size: 1.1em;
+  font-weight: 500;
+}
+
+.sticky-nav a:hover {
+  text-decoration: underline;
+  color: #4CAF50;
+}
+
+.section {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.section h2 {
+  text-align: center;
+  font-size: 1.8em;
+  color: #333;
+  margin-bottom: 30px;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 10px;
+}
+
+footer {
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 0.9em;
+}
+
+footer a {
+  color: #4CAF50;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+/* Dark mode support */
+.theme-toggle {
+  position: fixed;
+  top: 10px;
+  right: 20px;
+  padding: 8px 14px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.9em;
+  z-index: 1001;
+}
+
+.dark-mode {
+  background-color: #111;
+  color: #ddd;
+}
+
+.dark-mode header,
+.dark-mode footer,
+.dark-mode .sticky-nav {
+  background-color: #000;
+}
+
+.dark-mode .sticky-nav a {
+  color: #ddd;
+}
